@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "watch:scss": "node-sass -w styles/style.scss styles/style.css"
+  },
+  "devDependencies": {
+    "node-sass": "^8.0.0"
+  },
+  "dependencies": {
+    "scrollmagic": "^2.0.8"
+  }
+}

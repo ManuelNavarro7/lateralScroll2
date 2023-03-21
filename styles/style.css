@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-transform: uppercase; }
 
 #pinContainer {
@@ -19,10 +19,6 @@ body {
   width: 25%;
   float: left;
   text-align: center; }
-
-h1 {
-  margin-top: 100px;
-  display: inline-block; }
 
 .one {
   background-color: #5a2c74;
@@ -44,8 +40,186 @@ h1 {
   background-color: #4cb2a5;
   color: #FFF; }
 
-.horizontal-line {
-  border-top: 4px solid #FFF;
-  height: 4px;
-  width: 0px;
-  position: absolute; }
+/*------------------------------------------------------------------------------*/
+.Navbar {
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  background-color: white; }
+
+.brandName {
+  width: 240px;
+  font-size: 25px;
+  text-align: center;
+  color: black; }
+
+/*------------------------------------------------------------------------------*/
+.st-burger-icon-container {
+  display: inline-block;
+  margin: 4px;
+  font-size: 0;
+  vertical-align: middle; }
+
+.st-burger-icon {
+  display: inline-block;
+  cursor: pointer; }
+
+.st-burger-icon span,
+.st-burger-icon span:before,
+.st-burger-icon span:after {
+  display: block;
+  width: 100%;
+  background: black;
+  transition: all 0.5s;
+  backface-visibility: hidden; }
+
+.st-burger-icon span {
+  position: relative; }
+
+.st-burger-icon span:before,
+.st-burger-icon span:after {
+  position: absolute;
+  content: ""; }
+
+.st-burger-icon:hover span:before {
+  transform: translateY(-2px); }
+
+.st-burger-icon:hover span:after {
+  transform: translateY(2px); }
+
+.st-burger-icon--transformed span {
+  background: transparent; }
+
+.st-burger-icon--medium {
+  width: 28.8px;
+  height: 24px; }
+
+.st-burger-icon--medium span,
+.st-burger-icon--medium span:before,
+.st-burger-icon--medium span:after {
+  height: 2px; }
+
+.st-burger-icon--medium span {
+  margin: 11px 0 0; }
+
+.st-burger-icon--medium span:before {
+  top: -11px; }
+
+.st-burger-icon--medium span:after {
+  top: 11px; }
+
+.st-burger-icon--medium.st-burger-icon--transformed span:before {
+  transform: translate(0, 11px) rotate(-45deg); }
+
+.st-burger-icon--medium.st-burger-icon--transformed span:after {
+  transform: translate(0, -11px) rotate(45deg); }
+
+.icons {
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  transform: translate(-50%, -50%); }
+
+.icons > *:not(:last-child) {
+  margin-right: 30px; }
+
+.ListRef {
+  visibility: visible; }
+
+.ListRef2 {
+  margin-top: 0px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  background-color: black;
+  visibility: visible; }
+
+.lireponsive {
+  height: 60px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.lireponsive a {
+  text-decoration: none;
+  color: white;
+  font-size: 50px; }
+
+.lireponsive a:hover {
+  color: #04aa6d; }
+
+.close {
+  display: none; }
+
+@media screen and (max-width: 1000px) {
+  .ListRef {
+    visibility: hidden; }
+  .icons {
+    visibility: visible;
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    transform: translate(-50%, -50%); } }
+
+/*------------------------------------------------------------------------------*/
+.ulFullscreen {
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none; }
+
+.liFullscreen {
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.liFullscreen a {
+  color: black;
+  text-align: center;
+  padding: 0px 20px;
+  text-decoration: none; }
+
+.liFullscreen a:hover {
+  color: #04aa6d; }
+
+/*------------------------------------------------------------------------------*/
+.Main-Header {
+  width: 100%;
+  height: 700px;
+  background-color: gray;
+  margin-top: 60px; }
+
+.first-col-header {
+  padding-top: 200px; }
+
+.first-col-header h1 {
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1;
+  padding-left: 100px; }
+
+.first-col-header h2 {
+  font-size: 28px;
+  font-weight: 300;
+  padding-top: 10px;
+  padding-left: 100px; }
+
+.second-col-header img {
+  width: 600px;
+  height: 700px; }

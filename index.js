@@ -7,7 +7,7 @@ let twoLeftOffset = twoOffset.left - one;
 let firstLine = twoLeftOffset + right;
 let leftPos = para + x.left;
 
-$(".horizontal-line").css({"top": x.top, "left": leftPos});
+// $(".horizontal-line").css({"top": x.top, "left": leftPos});
 // init controller
 let controller = new ScrollMagic.Controller();
 
@@ -25,14 +25,44 @@ let controller = new ScrollMagic.Controller();
 			})
 		  .setPin("#pinContainer")
 			.setTween(wipeAnimation)
-			.addIndicators()
+			// .addIndicators()
 			.addTo(controller);
 
 
-   let horizontal = new ScrollMagic.Scene({
-        offset: 50,
-        duration: 300,
-       // reverse: false
-      }).setTween(".horizontal-line", {width: firstLine}) // trigger a TweenMax.to tween
-        // .addIndicators()
-        .addTo(controller);
+//    let horizontal = new ScrollMagic.Scene({
+//         offset: 50,
+//         duration: 300,
+//        // reverse: false
+//       })
+	//   .setTween(".horizontal-line", {width: firstLine}) // trigger a TweenMax.to tween
+    //     // .addIndicators()
+    //     .addTo(controller);
+
+//Menu
+
+let active = true;
+
+document
+  .querySelector(".st-burger-icon")
+  .addEventListener("click", function () {
+    active = !active;
+
+    console.log(active);
+    if (active === false) {
+      console.log("hola false");
+      this.classList.toggle("st-burger-icon--transformed");
+      let closeThings = document.querySelector(".active");
+      closeThings.classList.add("close");
+      let closeThings1 = document.querySelector(".ListRef2");
+      closeThings1.classList.remove("close");
+    }
+    if (active === true) {
+      console.log("hola true");
+      let burgerClose = document.querySelector(".st-burger-icon");
+      burgerClose.classList.remove("st-burger-icon--transformed");
+      let closeThings = document.querySelector(".active");
+      closeThings.classList.remove("close");
+      let closeThings1 = document.querySelector(".Jsclases");
+      closeThings1.classList.add("close");
+    }
+  });

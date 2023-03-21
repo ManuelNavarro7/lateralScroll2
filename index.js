@@ -66,3 +66,4 @@ document
       closeThings1.classList.add("close");
     }
   });
+  //coment
